@@ -1,1 +1,0 @@
-"""Module models du projet."""

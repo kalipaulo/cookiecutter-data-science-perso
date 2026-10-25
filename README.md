@@ -25,7 +25,7 @@ python -m pip install --upgrade cookiecutter
 cookiecutter gh:kalipaulo/cookiecutter-data-science-perso
 ```
 
-Cookiecutter demande le nom lisible du projet, l'auteur, une courte description et la version Python ciblée. Il crée automatiquement le dossier du projet et le nom importable du package : ne les saisissez pas séparément.
+Cookiecutter demande le nom lisible du projet, l'auteur, une courte description et la version Python cible. Exemple : `Analyse des ventes`. Le dossier généré (`analyse-des-ventes`) et le package Python (`analyse_des_ventes`) sont calculés automatiquement. Ne saisissez pas `13` comme nom de projet pour un test : utilisez plutôt un nom explicite. Si le nom lisible commence par un chiffre, le module Python reçoit automatiquement le préfixe `project_`.
 
 Les instructions détaillées sont dans [`README_UTILISATION.md`](README_UTILISATION.md). La structure générée est expliquée dans `STRUCTURE_FR.md`.
 
@@ -50,7 +50,7 @@ python -m pip install --upgrade cookiecutter
 cookiecutter gh:kalipaulo/cookiecutter-data-science-perso
 ```
 
-Cookiecutter asks for a human-readable project name, author, short description, and target Python version. It automatically derives the project directory and Python import package names.
+Cookiecutter asks for a human-readable project name, author, short description, and target Python version. Example: `Sales analysis`. The generated folder (`sales-analysis`) and Python package (`sales_analysis`) are derived automatically. Do not enter `13` as a test project name; use a descriptive name. If the readable name begins with a digit, the Python package is automatically prefixed with `project_`.
 
 See [`README_UTILISATION.md`](README_UTILISATION.md) for detailed instructions.
 

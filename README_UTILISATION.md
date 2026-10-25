@@ -20,7 +20,7 @@ cookiecutter gh:kalipaulo/cookiecutter-data-science-perso
 
 Cookiecutter pose quatre questions :
 
-1. **Nom du projet** : nom lisible qui apparaîtra dans le README et les titres.
+1. **Nom lisible du projet** : nom lisible qui apparaîtra dans le README et les titres.
 2. **Nom de l'auteur** : nom de la personne ou de l'équipe à afficher.
 3. **Description courte** : objectif du projet en une phrase.
 4. **Version de Python cible** : tape le numéro correspondant à la version souhaitée. Le choix est inscrit dans `environment.yml` et `pyproject.toml`. Appuie sur Entrée pour garder la première option proposée.

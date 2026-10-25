@@ -1,7 +1,7 @@
 {
   "project_name": "Mon projet Data Science",
   "__project_slug": "{{ cookiecutter.project_name | slugify }}",
-  "__module_name": "{{ cookiecutter.project_name | slugify(separator='_') }}",
+  "__module_name": "{{ ('project_' if (cookiecutter.project_name | slugify(separator='_'))[0:1].isdigit() else '') ~ (cookiecutter.project_name | slugify(separator='_')) }}",
   "author_name": "Votre nom",
   "description": "Décrivez le projet en une phrase.",
   "python_version": [
@@ -10,7 +10,7 @@
     "3.14"
   ],
   "__prompts__": {
-    "project_name": "Nom du projet / Project name — nom lisible affiché dans le README, les titres et la documentation / human-readable name shown in docs",
+    "project_name": "Nom du projet / Project name — saisis un nom lisible, par ex. « Analyse des ventes ». Le nom du dossier et le nom du module Python seront générés automatiquement : ne les saisis pas séparément. / Enter a human-readable name, e.g. 'Sales analysis'. The folder slug and Python module are derived automatically.",
     "author_name": "Nom de l'auteur / Author name — nom ou équipe à afficher dans les métadonnées / name to show in metadata",
     "description": "Description courte / Short description — explique en une phrase le but du projet / one-sentence project purpose",
     "python_version": {
