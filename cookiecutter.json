@@ -1,8 +1,23 @@
 {
   "project_name": "Mon projet Data Science",
-  "project_slug": "mon-projet-data-science",
-  "module_name": "mon_projet_data_science",
+  "__project_slug": "{{ cookiecutter.project_name | slugify }}",
+  "__module_name": "{{ cookiecutter.project_name | slugify(separator='_') }}",
   "author_name": "Votre nom",
-  "description": "Description courte du projet.",
-  "python_version": "3.12"
+  "description": "Décrivez le projet en une phrase.",
+  "python_version": [
+    "3.12",
+    "3.13",
+    "3.11"
+  ],
+  "__prompts__": {
+    "project_name": "Nom du projet / Project name — nom lisible affiché dans le README et les titres",
+    "author_name": "Nom de l'auteur / Author name — nom affiché dans les métadonnées du projet",
+    "description": "Description courte / Short description — explique en une phrase l'objectif du projet",
+    "python_version": {
+      "__prompt__": "Version de Python / Python version — quelle version le projet doit-il utiliser ?",
+      "3.12": "Python 3.12 — choix recommandé par défaut / recommended default",
+      "3.13": "Python 3.13 — version plus récente, vérifier la compatibilité des dépendances / newer, check dependency compatibility",
+      "3.11": "Python 3.11 — option de compatibilité pour certains environnements / compatibility option"
+    }
+  }
 }
