@@ -1,0 +1,8 @@
+{
+  "project_name": "Mon projet Data Science",
+  "project_slug": "mon-projet-data-science",
+  "module_name": "mon_projet_data_science",
+  "author_name": "Votre nom",
+  "description": "Description courte du projet.",
+  "python_version": "3.12"
+}

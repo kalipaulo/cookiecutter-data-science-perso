@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# Environnements et secrets
+.venv/
+venv/
+env/
+.env
+.env.*
+!.env.example
+config/local.yaml
+
+# Notebooks et tests
+.ipynb_checkpoints/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Données : les versions brutes/traitées ne sont pas versionnées par défaut
+# Les .gitkeep sont conservés pour rendre la structure visible dans Git.
+data/raw/*
+!data/raw/.gitkeep
+data/external/*
+!data/external/.gitkeep
+data/interim/*
+!data/interim/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+
+# Artefacts générés
+models/*
+!models/.gitkeep
+outputs/*
+!outputs/README.md
+!outputs/predictions/
+outputs/predictions/*
+!outputs/predictions/.gitkeep
+reports/figures/*
+!reports/figures/.gitkeep
+reports/tables/*
+!reports/tables/.gitkeep
