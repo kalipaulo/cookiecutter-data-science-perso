@@ -5,7 +5,7 @@ Ce projet suit une organisation inspirée de Cookiecutter Data Science. La struc
 ## Arborescence
 
 ```text
-{{ cookiecutter.project_slug }}/
+{{ cookiecutter.__project_slug }}/
 ├── config/                     # Paramètres modifiables du projet
 ├── data/
 │   ├── raw/                    # Données originales, non modifiées
@@ -22,7 +22,7 @@ Ce projet suit une organisation inspirée de Cookiecutter Data Science. La struc
 ├── reports/
 │   ├── figures/                # Graphiques exportés
 │   └── tables/                 # Tableaux exportés pour les rapports
-├── src/{{ cookiecutter.module_name }}/
+├── src/{{ cookiecutter.__module_name }}/
 │   ├── config.py               # Chemins et configuration centrale
 │   ├── data/                   # Chargement, validation et préparation des données
 │   ├── features/               # Création et transformation des variables

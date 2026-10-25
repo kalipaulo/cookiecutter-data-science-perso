@@ -1,0 +1,1 @@
+"""Module utils du projet."""

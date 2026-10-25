@@ -7,17 +7,17 @@
   "python_version": [
     "3.12",
     "3.13",
-    "3.11"
+    "3.14"
   ],
   "__prompts__": {
-    "project_name": "Nom du projet / Project name — nom lisible affiché dans le README et les titres",
-    "author_name": "Nom de l'auteur / Author name — nom affiché dans les métadonnées du projet",
-    "description": "Description courte / Short description — explique en une phrase l'objectif du projet",
+    "project_name": "Nom du projet / Project name — nom lisible affiché dans le README, les titres et la documentation / human-readable name shown in docs",
+    "author_name": "Nom de l'auteur / Author name — nom ou équipe à afficher dans les métadonnées / name to show in metadata",
+    "description": "Description courte / Short description — explique en une phrase le but du projet / one-sentence project purpose",
     "python_version": {
-      "__prompt__": "Version de Python / Python version — quelle version le projet doit-il utiliser ?",
-      "3.12": "Python 3.12 — choix recommandé par défaut / recommended default",
-      "3.13": "Python 3.13 — version plus récente, vérifier la compatibilité des dépendances / newer, check dependency compatibility",
-      "3.11": "Python 3.11 — option de compatibilité pour certains environnements / compatibility option"
+      "__prompt__": "Version de Python cible / Python version target — choisis le numéro correspondant à la version utilisée pour créer l'environnement. Ce choix sera inscrit dans environment.yml et pyproject.toml / select the version used for the environment; it will be written to environment.yml and pyproject.toml",
+      "3.12": "Python 3.12 — choix par défaut, bon compromis pour la compatibilité Data Science / default, broad data-science compatibility",
+      "3.13": "Python 3.13 — version plus récente, vérifier les dépendances spécifiques / newer, check package compatibility",
+      "3.14": "Python 3.14 — version récente, vérifier que toutes les bibliothèques du projet la prennent en charge / recent, verify all dependencies support it"
     }
   }
 }

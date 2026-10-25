@@ -1,0 +1,22 @@
+# Python artifacts
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.coverage
+
+# Environments and secrets
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Cookiecutter local replay/cache files
+.cookiecutter_replay/

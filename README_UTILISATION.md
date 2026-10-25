@@ -1,56 +1,56 @@
-# Modèle personnel Cookiecutter — Data Science
+# Utiliser le modèle Cookiecutter Data Science Kalipolo
 
-Ce dépôt est un **modèle de projet**, pas un projet d'analyse lui-même. Il sert à générer une nouvelle arborescence Data Science homogène à chaque projet.
+## 🇫🇷 Français
 
-## 1. Ce que contient le modèle
+Ce dépôt est un **modèle de projet**. Il ne contient pas l'analyse d'un jeu de données spécifique : Cookiecutter s'en sert pour générer un nouveau projet avec une structure cohérente.
 
-- `cookiecutter.json` : les questions et valeurs par défaut proposées lors de la génération.
-- `{{cookiecutter.project_slug}}/` : tous les fichiers et dossiers qui seront copiés dans le nouveau projet.
-- `STRUCTURE_FR.md` dans le projet généré : explication en français de chaque dossier et des règles de rangement.
+### Générer depuis GitHub
 
-## 2. Installer Cookiecutter
-
-Dans un terminal PowerShell, installe l'outil dans l'environnement Python que tu réserves aux outils de génération :
+Installe Python et Git, puis installe Cookiecutter :
 
 ```powershell
 python -m pip install --upgrade cookiecutter
 ```
 
-Cookiecutter peut rester installé dans ton environnement habituel. Il n'est pas nécessaire de le réinstaller dans chaque environnement de projet.
-
-## 3. Générer un nouveau projet depuis ce modèle local
-
-Place-toi dans le dossier où tu veux créer le nouveau projet. Remplace le chemin ci-dessous par le chemin où tu as conservé ce dossier de modèle :
+Depuis le dossier dans lequel tu veux créer le projet, lance :
 
 ```powershell
-cd "C:/Users/TON_UTILISATEUR/Documents/Modeles"
-cookiecutter "C:/Users/TON_UTILISATEUR/Documents/Modeles/cookiecutter_data_science_perso"
+cookiecutter gh:kalipaulo/cookiecutter-data-science-perso
 ```
 
-Cookiecutter te posera les questions de `cookiecutter.json`. Appuie sur Entrée pour accepter la valeur entre parenthèses, ou saisis une nouvelle valeur.
+Cookiecutter pose quatre questions :
 
-Un dossier portant le nom `project_slug` sera créé dans le dossier courant. Il contiendra la structure complète du projet.
+1. **Nom du projet** : nom lisible qui apparaîtra dans le README et les titres.
+2. **Nom de l'auteur** : nom de la personne ou de l'équipe à afficher.
+3. **Description courte** : objectif du projet en une phrase.
+4. **Version de Python cible** : tape le numéro correspondant à la version souhaitée. Le choix est inscrit dans `environment.yml` et `pyproject.toml`. Appuie sur Entrée pour garder la première option proposée.
 
-> Important : conserve le dossier `cookiecutter_data_science_perso` à un emplacement stable. Pour chaque nouveau projet, exécute la commande depuis le dossier parent où tu veux le créer. Ne lance pas la génération à l'intérieur d'un projet existant.
+Le nom du dossier (`analyse-des-ventes`) et le nom du package Python (`analyse_des_ventes`) sont calculés automatiquement depuis le nom du projet. Tu ne dois pas les saisir séparément.
 
-## 4. Premier démarrage du projet généré
+### Démarrer le projet généré
 
-Depuis le dossier nouvellement créé :
+Depuis le dossier créé par Cookiecutter :
 
 ```powershell
 conda env create -f environment.yml
-conda activate NOM_DU_MODULE
+conda activate NOM-DU-PROJET
 python -m pip install -e .
 python -m pytest tests -v
 ```
 
-`NOM_DU_MODULE` correspond à la valeur donnée à `module_name` au moment de la génération. Si tu ne souhaites pas utiliser Conda, crée un environnement virtuel Python et installe les dépendances listées dans `environment.yml` avec une méthode adaptée.
+Remplace `NOM-DU-PROJET` par le nom du dossier généré, affiché lors de la création. Tu peux aussi utiliser `python -m venv .venv` si tu ne souhaites pas utiliser Conda.
 
-## 5. Utiliser le template officiel Cookiecutter Data Science
+## 🇬🇧 English
 
-Le modèle officiel est une bonne base de départ et la commande `ccds` génère le template officiel v2. Pour ton **modèle personnalisé**, utilise plutôt la commande `cookiecutter` avec le chemin de ce dossier. Cela permet de conserver tes propres noms, dossiers et documentation d'un projet à l'autre.
+This repository is a **project template**, not a project containing a specific data analysis. Cookiecutter uses it to generate a new project with a consistent structure.
 
-Documentation officielle :
-- Cookiecutter Data Science : https://cookiecutter-data-science.drivendata.org/
-- Utilisation du template : https://cookiecutter-data-science.drivendata.org/using-the-template/
-- Cookiecutter générique : https://cookiecutter.readthedocs.io/en/stable/overview.html
+Install Cookiecutter, then run this command from the parent directory where the new project should be created:
+
+```powershell
+python -m pip install --upgrade cookiecutter
+cookiecutter gh:kalipaulo/cookiecutter-data-science-perso
+```
+
+You will be asked for the human-readable project name, author, one-sentence description, and target Python version. The folder slug and importable Python package name are generated automatically from the project name.
+
+See `STRUCTURE_FR.md` in the generated project for a detailed French explanation of each folder.

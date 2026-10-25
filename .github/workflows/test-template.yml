@@ -1,0 +1,36 @@
+name: Test Cookiecutter template
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  generate-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout template repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Cookiecutter
+        run: python -m pip install --upgrade pip cookiecutter
+
+      - name: Generate a test project
+        run: >-
+          cookiecutter --no-input --output-dir "$RUNNER_TEMP/generated" .
+          project_name="Template smoke test"
+          author_name="GitHub Actions"
+          description="Generated project used to test the template."
+          python_version="3.12"
+
+      - name: Install the generated project
+        run: python -m pip install -e "$RUNNER_TEMP/generated/template-smoke-test"
+
+      - name: Run generated-project tests
+        run: python -m pytest "$RUNNER_TEMP/generated/template-smoke-test/tests" -v
