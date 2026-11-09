@@ -32,7 +32,8 @@ jobs:
       - name: Install the generated project
         run: python -m pip install -e "$RUNNER_TEMP/generated/template-smoke-test"
 
-      - name: Run generated-project tests
-        run: python -m pytest "$RUNNER_TEMP/generated/template-smoke-test/tests" -v
       - name: Install pytest
         run: python -m pip install --upgrade pytest
+
+      - name: Run generated-project tests
+        run: python -m pytest "$RUNNER_TEMP/generated/template-smoke-test/tests" -v
